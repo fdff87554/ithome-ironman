@@ -44,9 +44,9 @@
 我們藉由打開 ASUS Router 的 VPN 設定選項時，可以看到其提供 PPTP 跟 OpenVPN 兩個選項做使用（此 Router 已經有些老舊，新型的應該還包含 WireGuard VPN 等其他驗證技術），就讓我們嘗試認識一下他們吧！
 
 - PPTP - Point-to-Point Tunneling Protocol，中文叫做點對點隧道協定，是一種將點對點連線透過 TCP/IP 來進行封裝的協定，而 PPTP 本身是一種對稱式加密技術，其加密技術是使用 MPPE（Microsoft Point-to-Point Encryption）來進行加密。從截圖中可以看到，ASUS Router 針對 PPTP 的設定有包含 MPPE Encryption 的算法等等。
-  > ![ASUS VPN PPTP Setting](https://raw.githubusercontent.com/fdff87554/iThome-Ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/ASUS-VPN-PPTP-Setting.png)
+  > ![ASUS VPN PPTP Setting](https://raw.githubusercontent.com/fdff87554/ithome-ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/ASUS-VPN-PPTP-Setting.png)
 - OpenVPN - OpenVPN 是一種開源的 VPN 協定，提供高度的安全性和可配置性。主要是利用 SSL/TLS 進行鑰匙交換，並支援多種加密算法，如 AES 等。那 OpenVPN 就有利用到多種加密法來做到不同的功能，包含非對稱式加密進行身份驗證，AES 等對稱是加密做到資料加密與保護等等。從截圖可以看到，ASUS Router 針對 OpenVPN 的設定有包含加密法的挑選等等。
-  > ![ASUS VPN OpenVPN Setting](https://raw.githubusercontent.com/fdff87554/iThome-Ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/ASUS-VPN-OpenVPN-Setting.png)
+  > ![ASUS VPN OpenVPN Setting](https://raw.githubusercontent.com/fdff87554/ithome-ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/ASUS-VPN-OpenVPN-Setting.png)
 
 那到底 PPTP 跟 OpenVPN 這兩種加密技術的安全性如何呢？我們可以從下面的表格來看看。
 

@@ -20,7 +20,7 @@
 
 但今天 Router 或者 Firewall 的相關設定是對於公司網路或者任何網路都是非常非常重要的，如果任何使用者都可以操作這個頁面，理所當然是非常危險的事情，因此這時 Firewall 針對網路的控管就非常非常重要了，還記得前幾天在設定 RouterOS 時，我們就有特別設定當今天有從 VPN 的 Interface 的流量要進入 RouterOS 時，就會全部 Drop 掉。
 
-> ![Firewall Setting Example of Drop Input](https://raw.githubusercontent.com/fdff87554/iThome-Ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/Firewall-Setting-Example-of-Drop-Input.png)
+> ![Firewall Setting Example of Drop Input](https://raw.githubusercontent.com/fdff87554/ithome-ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/Firewall-Setting-Example-of-Drop-Input.png)
 
 #### 不同網域的連線
 

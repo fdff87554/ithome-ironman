@@ -95,7 +95,7 @@
    net.ipv4.ip_forward=1
    ```
    並且可以使用下面指令檢查環境 `sudo sysctl -p`，可以看到我們的變更狀況
-   > ![Command sysctl -p check](https://raw.githubusercontent.com/fdff87554/iThome-Ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/Command-sysctl--p-check.png)
+   > ![Command sysctl -p check](https://raw.githubusercontent.com/fdff87554/ithome-ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/Command-sysctl--p-check.png)
 5. 設定基本的流量規則，需要將我們的接口流量給放行，因此這邊我們依照
    1. 使用 `ip route list default` 指令確認 WireGuard 伺服器的公共網路介面，Output 可能會長得像這樣 `default via 203.0.113.1 dev eth0 proto static`，裡面的 `eth0` 就會是我們要記得的部分。
    2. 在剛剛的 `/etc/wireguard/wg0.conf` 檔案中新增以下設定在剛剛的 `SaveConfig = true` 指令後面。

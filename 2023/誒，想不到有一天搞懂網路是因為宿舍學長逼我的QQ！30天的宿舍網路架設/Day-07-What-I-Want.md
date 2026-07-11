@@ -6,7 +6,7 @@
 
 由於 PVE 仍然有官方的維護資源跟社群維護資源的差異，如果你是有訂閱官方資源的，那可以直接註冊完之後使用，但如果沒有，我們在使用 `apt-get update` 的時候會發現一些 Error Message。
 
-> ![PVE Apt Update Error](https://raw.githubusercontent.com/fdff87554/iThome-Ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/PVE-Apt-Update-Error.png)
+> ![PVE Apt Update Error](https://raw.githubusercontent.com/fdff87554/ithome-ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/PVE-Apt-Update-Error.png)
 
 為此我們要稍微調整一下資料來源。從 [官方文件](https://pve.proxmox.com/pve-docs/pve-admin-guide.html#sysadmin_package_repositories) 的說明裝可以看到 APT Repositories 的相關定義文件是由 `/etc/apt/sources.list` 跟 `/etc/apt/sources.list.d/` 裡面做維護。
 
@@ -34,11 +34,11 @@ deb http://security.debian.org/debian-security bookworm-security main contrib
 
 先來回顧一下我目前設備跟網路的關係，不管學校那邊是如何對外溝通的，我從宿舍網路取得了一個對外的實體 IP，也就是 `140.114.234.160`，那我基本上的實體設備目前有 PVE Server / Desktop / Laptop / Phone ... 等等多個設備，但直接連接牆壁裡面的網路孔的只有一台設備，也就是我的 ASUS Router，因此我們回頭看一下現在的網路架構狀況如下。
 
-> ![Network Structure](https://raw.githubusercontent.com/fdff87554/iThome-Ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/Network-Structure.png)
+> ![Network Structure](https://raw.githubusercontent.com/fdff87554/ithome-ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/Network-Structure.png)
 
 那現在這樣的運作其實沒什麼問題，對於 PVE 裡面的虛擬機來說，你可以全部想像成跟 PVE 同樣層級的機器，你應該全部將其視為一台獨立完整的設備（其虛擬機的網路設定為 Bridge），因此其可以跟 ASUS Router 直接藉由 DHCP 獲得分發的 IP，或者直接指定由 `192.168.50` 子網域的 Static IP 也是沒問題的。那感覺就沒什麼問題了對吧？畢竟依照網路拓樸圖的架構來看，設個設備的狀況應該長這樣，都在 `192.168.50` 的子網域中。
 
-> ![Network Topology Graph](https://raw.githubusercontent.com/fdff87554/iThome-Ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/Network-Topology-Graph.png)
+> ![Network Topology Graph](https://raw.githubusercontent.com/fdff87554/ithome-ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/Network-Topology-Graph.png)
 
 誒，什麼是網路拓樸圖？怎麼突然冒出了一個新名詞？其實網路拓樸圖就是一個說明闡述設備之間網路連接狀態的一種圖示，你也可以說網路拓撲是網路的排列方式。你可以把網路世界想像成城市，將拓撲視為路線圖。當我們繪製或者閱讀網路拓樸圖時，可以直接知道網路設備之間的關係與互動。那從我們上方的網路拓樸圖可以看到我們其實目前所有對外網路都是由我們的 ASUS Router 在處理，且子網域都屬於 `50` 網段。
 

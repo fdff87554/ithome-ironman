@@ -16,7 +16,7 @@
 ### WAN & LAN
 
 面對網路設備，第一個會接觸到的名詞就是 WAN 跟 LAN，為什麼呢？因為你插網路線的時候就會看到了，兩種不同的網路接孔。
-> ![Image of Router Network socket](https://raw.githubusercontent.com/fdff87554/iThome-Ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/Image-of-Router.png)
+> ![Image of Router Network socket](https://raw.githubusercontent.com/fdff87554/ithome-ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/Image-of-Router.png)
 > Ref: https://www.asus.com/tw/networking-iot-servers/wifi-routers/asus-wifi-routers/rt-ac1500g-plus/
 
 #### 那什麼是 WAN 什麼是 LAN 呢？
@@ -29,7 +29,7 @@
   - 那這些縣市是不是也會有區域，所以假設今天臺北市是一個節點，那 WAN 就是其他縣市 VS 臺北市，然後 LAN 就是臺北市裡面的行政區域，以此類推。
 - 也因此我們會說 WAN 跟 LAN 是一個相對的管理單位跟角色，取決於我現在正在哪一個大小的節點上運作，並且身份可能會有所不同。
 - 最後，我們也可以用一種比較粗淺的概念，把 WAN 當作外面，LAN 當作裡面。當我今天與一個節點互動時，我就是這個節點所維護的 LAN，我會有一個被節點所管理的狀態與身份，而所有從這個節點對外的資訊或者流量，都會走同一個 WAN 出去。
-  > ![WAN and LAN Example](https://raw.githubusercontent.com/fdff87554/iThome-Ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/WAN_LAN_Example.png)
+  > ![WAN and LAN Example](https://raw.githubusercontent.com/fdff87554/ithome-ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/WAN_LAN_Example.png)
 
 #### 外網 & 內網
 
@@ -37,7 +37,7 @@
 - 上面的例子有點複雜對吧，我們換個說法。一般來說，我們用到“地圖找地址”最重要的資訊有哪些，來確保我從一個房子走到另外一個房子？是 `國家/城鎮/區域/街道...`，這些是指向地圖上一個唯一點的重要資訊，`幾號/幾樓/之幾`這些資訊是說明“房子的精確位置”，每個房子都可以長一樣，對於我找到地圖上一個特定點來說一點都不重要，因為大量重複都沒關係，也就是上面所說的，A 大樓也會有 1,2,3,4,5 樓，B 大樓有可以有 1,2,3,4,5 樓，重要的是那個 A / B 大樓。
 - 但回到更上面，因為區域的定義不同，有時候哪一個大樓也可能不重要，因為我要找的是社區，之類的。但沒關係，我們要比較粗暴的切分內外的話，仍然是可以的，舉例來說，我可以稱呼剛剛總統府的地址的那個 `臺北市中正區重慶南路一段122號` 的 **號** 是 **外部地址** 的最小單位，之後裡面的幾房幾室都是所謂的 **內部地址**，同理，內網跟外網我們可以很粗略的切分一個這樣的外部唯一識別跟內部網路。當然，請仍然記得所有的節點都仍有內外的概念。
 - 那一般來說，我們會強調外網 IP 或者所謂的 Public IP 會是一個由通訊機構所核發的唯一地址，而內網 IP 或者所謂的 Private IP 則可以隨意由我們自己設定跟提供，而且每個環境內部自己配發的 Private IP 就跟大樓的概念一樣，會出現重複的，例如 `192.168.xx.xx` 或者 `10.xx.xx.xx`。這也是為什麼內外的那個概念很重要，因為內部網路可以隨意依照我們的需求跟喜好調整，但外部會需要依照外面的規則，否則別人無法正確找到你。
-  > ![Private IP & Public IP](https://raw.githubusercontent.com/fdff87554/iThome-Ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/Public_IP&Private_IP.png)
+  > ![Private IP & Public IP](https://raw.githubusercontent.com/fdff87554/ithome-ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/Public_IP&Private_IP.png)
 
 #### Conclusion
 
@@ -48,15 +48,15 @@
 
 在我們知道什麼事 WAN & LAN 之後，我們總算知道網孔怎麼插了，現在來讓我們看看 ASUS 的設定介面
 
-> ![ASUS Router Setting](https://raw.githubusercontent.com/fdff87554/iThome-Ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/ASUS-Router-Setting.png)
+> ![ASUS Router Setting](https://raw.githubusercontent.com/fdff87554/ithome-ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/ASUS-Router-Setting.png)
 
 可以看到裡面有 WAN 跟 LAN 的設定選項，先看 WAN 的設定選項，有 `Internet Connection` / `Dual WAN` / `Port Trigger` 等等可以調整設定的項目。
 
-> ![ASUS Router WAN Setting](https://raw.githubusercontent.com/fdff87554/iThome-Ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/ASUS-Router-WAN-Setting.png)
+> ![ASUS Router WAN Setting](https://raw.githubusercontent.com/fdff87554/ithome-ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/ASUS-Router-WAN-Setting.png)
 
 而 LAN 的設定選項則有如 `LAN IP` / `DHCP Server` / `Route` 等等可以調整的項目。
 
-> ![ASUS Router LAN Setting](https://raw.githubusercontent.com/fdff87554/iThome-Ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/ASUS-Router-LAN-Setting.png)
+> ![ASUS Router LAN Setting](https://raw.githubusercontent.com/fdff87554/ithome-ironman/main/2023/%E8%AA%92%EF%BC%8C%E6%83%B3%E4%B8%8D%E5%88%B0%E6%9C%89%E4%B8%80%E5%A4%A9%E6%90%9E%E6%87%82%E7%B6%B2%E8%B7%AF%E6%98%AF%E5%9B%A0%E7%82%BA%E5%AE%BF%E8%88%8D%E5%AD%B8%E9%95%B7%E9%80%BC%E6%88%91%E7%9A%84QQ%EF%BC%8130%E5%A4%A9%E7%9A%84%E5%AE%BF%E8%88%8D%E7%B6%B2%E8%B7%AF%E6%9E%B6%E8%A8%AD/Images/ASUS-Router-LAN-Setting.png)
 
 所以就讓我們藉由相關設定來學習吧！這部分就明天見！
 
